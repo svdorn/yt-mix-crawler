@@ -13,6 +13,12 @@ Example:
 python3 run_crawl.py input_playlists output_playlists
 ```
 
+## Testing
+To test the crawler, run the test_crawl.py script. It takes no arguments. The script will test the crawler for one playlist only.
+```
+python3 test_crawl.py
+```
+
 ## Built With
 -   [Python](https://www.python.org/)
 -   [Pandas](https://pandas.pydata.org/)
