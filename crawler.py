@@ -1,5 +1,4 @@
 import requests
-import multiprocessing
 from bs4 import BeautifulSoup as bs
 from time import time
 from random import choice
