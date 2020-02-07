@@ -7,6 +7,7 @@ def main():
         output_filename = sys.argv[2]
     except:
         return print("Incorrect arguments passed to script. Script takes 2 arguments - input_filename (String) and output_filename (String).")
+        
     playlists = read_playlists_csv("input/"+input_filename+".csv")
     return find_all_playlists(playlists, output_filename)
 
