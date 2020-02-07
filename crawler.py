@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as bs
-from time import time
+from time import sleep
 from random import choice
 from itertools import cycle
 import pandas as pd
@@ -34,8 +34,9 @@ def find_all_playlists(playlists, filename):
 
     for idx, playlist in playlists.iterrows():
         playlist['link'] = find_playlist([playlist['name'], next(proxy_pool)])
-        playlists_updated = playlists_updated.append(playlist, index=DF_COLUMNS)
-        time.sleep(5) # delay for 5 seconds
+        playlists_updated = playlists_updated.append(pd.Series(playlist, index=DF_COLUMNS))
+        print("Playlist ", idx)
+        sleep(2) # delay for 2 seconds
 
     return save_playlists_csv(playlists_updated, filename)
 
